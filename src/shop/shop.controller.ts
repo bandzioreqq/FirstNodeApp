@@ -29,6 +29,13 @@ export class ShopController {
     ): Promise<GetListOfProductsResponse> {
         return this.shopService.findItems(searchTerm);
     }
+    @Get('/orm/:searchTerm')
+    testOrmFindItem(
+        @Param('searchTerm') searchTerm:string,
+    ): Promise<GetListOfProductsResponse> {
+        return this.shopService.findOrmItems(searchTerm);
+    }
+
     @Get('/:id')
     getOneProduct(
         @Param('id') id:string,
