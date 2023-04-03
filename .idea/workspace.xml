@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b618ff83-72d8-4b2e-b762-98f7fffdc8b4" name="Changes" comment="Update to new versions ! !!!">
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="9c6fb361-9279-451b-a368-4709f2605a59" />
+        <option name="url" value="https://github.com/bandzioreqq/FirstNodeApp.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2MRz2HLJztZkmLHyySwivRhni7o" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "javascript.nodejs.core.library.configured.version": "18.14.2",
+    "javascript.nodejs.core.library.typings.version": "18.14.2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "C:\\Users\\banda\\AppData\\Roaming\\npm\\yarn.cmd",
+    "settings.editor.selected.configurable": "inlay.hints",
+    "ts.external.directory.path": "C:\\Users\\banda\\Desktop\\Projekty\\PierwszyNest\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\banda\Desktop\Projekty\PierwszyNest\src\basket\dto" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.start:dev">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start:dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start:dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start:dev" />
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b618ff83-72d8-4b2e-b762-98f7fffdc8b4" name="Changes" comment="" />
+      <created>1677744975019</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677744975019</updated>
+      <workItem from="1677744976664" duration="238000" />
+      <workItem from="1677745266122" duration="667000" />
+      <workItem from="1677746172969" duration="2446000" />
+      <workItem from="1678136474347" duration="2374000" />
+      <workItem from="1678308332010" duration="2870000" />
+      <workItem from="1678540964577" duration="3903000" />
+      <workItem from="1680382165658" duration="21178000" />
+      <workItem from="1680522993952" duration="14000" />
+      <workItem from="1680523188645" duration="10360000" />
+    </task>
+    <task id="LOCAL-00001" summary="Create new project">
+      <created>1678137524260</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678137524260</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added new controlle.">
+      <created>1678137963570</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678137963570</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added product/basket service">
+      <created>1678541034596</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678541034596</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added shop service">
+      <created>1678541163455</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678541163455</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Updated functions.">
+      <created>1678544276687</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678544276687</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added few function:&#10;-search&#10;-pagination">
+      <created>1680517908964</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680517908964</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added few function:&#10;-search&#10;-pagination">
+      <created>1680522388766</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680522388766</updated>
+    </task>
+    <task id="LOCAL-00008" summary="before Query Builder">
+      <created>1680532315742</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680532315742</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Update to new versions ! !!!">
+      <created>1680533665926</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680533665926</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Create new project" />
+    <MESSAGE value="Added new controlle." />
+    <MESSAGE value="Added product/basket service" />
+    <MESSAGE value="Added shop service" />
+    <MESSAGE value="Updated functions." />
+    <MESSAGE value="Added few function:&#10;-search&#10;-pagination" />
+    <MESSAGE value="before Query Builder" />
+    <MESSAGE value="Update to new versions ! !!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update to new versions ! !!!" />
+  </component>
+</project>
