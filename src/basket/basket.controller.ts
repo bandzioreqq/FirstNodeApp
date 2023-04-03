@@ -1,5 +1,5 @@
 import {Controller, Post, Body, Inject, Param, Delete, Get} from '@nestjs/common';
-import {AddProductDto} from "./add-product.dto";
+import {AddProductDto} from "./dto/add-product.dto";
 import {BasketService} from "./basket.service";
 import {
     AddProductToBasketResponse, GetTotalPriceResponse,
@@ -32,7 +32,7 @@ export class BasketController {
 return this.basketService.list();
     }
     @Get('/total-price')
-    getTotalPrice(): GetTotalPriceResponse{
+    getTotalPrice(): Promise<GetTotalPriceResponse>{
         return this.basketService.getTotalPrice();
     }
 }

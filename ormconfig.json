@@ -4,9 +4,10 @@
   "port": 3306,
   "username": "root",
   "password": "",
-  "database": "test_samuraj",
+  "database": "test",
   "entities": ["dist/**/**.entity{.ts,.js}"],
   "bigNumberStrings": false,
   "logging": true,
   "synchronize": true
+
 }

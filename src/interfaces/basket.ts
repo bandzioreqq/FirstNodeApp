@@ -1,4 +1,4 @@
-import {AddProductDto} from "../basket/add-product.dto";
+import {AddProductDto} from "../basket/dto/add-product.dto";
 
 export type AddProductToBasketResponse = {
     isSuccess: true;
@@ -15,4 +15,5 @@ export type ListProductInBasketResponse = AddProductDto[];
 
 export type GetTotalPriceResponse = number | {
     isSuccess: false;
+    alternativeBasket: AddProductDto[];
 };

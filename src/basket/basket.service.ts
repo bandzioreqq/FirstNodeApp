@@ -1,5 +1,5 @@
-import {Injectable, Inject} from '@nestjs/common';
-import {AddProductDto} from './add-product.dto';
+import {Injectable, Inject, forwardRef} from '@nestjs/common';
+import {AddProductDto} from './dto/add-product.dto';
 import {
     AddProductToBasketResponse, GetTotalPriceResponse,
     ListProductInBasketResponse,
@@ -12,12 +12,12 @@ export class BasketService {
     private items: AddProductDto[] = [];
 
     constructor(
-        @Inject(ShopService) private shopService: ShopService,
+        @Inject(forwardRef( ()=>ShopService )) private shopService: ShopService,
     ) {
     }
 
     add(item: AddProductDto): AddProductToBasketResponse {
-        const {name, count} = item;
+        const {name, count, id} = item;
         if (
             typeof name !== 'string'
             ||
@@ -26,8 +26,8 @@ export class BasketService {
             name === ''
             ||
             count < 1
-            ||
-            !this.shopService.hasProduct(name)
+            // ||
+            // !this.shopService.hasProduct(name)
         ) {
             return {
                 isSuccess: false,
@@ -36,6 +36,9 @@ export class BasketService {
 
 
         this.items.push(item);
+
+        this.shopService.addBoughtCounter(id);
+
         return {
             isSuccess: true,
             index: this.items.length - 1,
@@ -63,14 +66,22 @@ export class BasketService {
         return this.items;
     }
 
-    getTotalPrice():GetTotalPriceResponse {
-        if (!this.items.every(item=> this.shopService.hasProduct(item.name))){
+   async getTotalPrice():Promise<GetTotalPriceResponse> {
+        if (!this.items.every(item => this.shopService.hasProduct(item.name))){
+           const alternativeBasket = this.items.filter(item=> this.shopService.hasProduct(item.name));
             return {
                 isSuccess: false,
+                alternativeBasket,
             };
         }
-        return this.items
-            .map(item => this.shopService.getPriceOfProduct(item.name) * item.count * 1.23)
-            .reduce((prev,curr) => prev + curr, 0);
+        return (await Promise.all(
+                this.items
+                    .map(async item => (await this.shopService.getPriceOfProduct(item.name)) * item.count * 1.23)
+
+            )
+      ).reduce((prev,curr) => prev + curr, 0);
+    }
+    async countPromo():Promise<number>{
+        return (await this.getTotalPrice()) > 10 ? 1 : 0;
     }
 }
