@@ -1,38 +1,52 @@
-import {Controller, Post, Body, Inject, Param, Delete, Get} from '@nestjs/common';
-import {AddProductDto} from "./dto/add-product.dto";
-import {BasketService} from "./basket.service";
 import {
-    AddProductToBasketResponse, GetTotalPriceResponse,
-    ListProductInBasketResponse,
-    RemoveProductFromBasketResponse
-} from "../interfaces/basket";
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Inject,
+  Param,
+  Post,
+} from '@nestjs/common';
+import { AddItemDto } from './dto/add-item.dto';
+import { BasketService } from './basket.service';
+import {
+  AddProductToBasketResponse,
+  GetBasketResponse,
+  GetTotalBasketPriceResponse,
+  RemoveProductFromBasketResponse,
+} from '../types';
 
 @Controller('basket')
 export class BasketController {
-    constructor(
-        @Inject(BasketService) private basketService: BasketService,
-    ) {
-    }
+  constructor(
+    @Inject(BasketService) private readonly basketService: BasketService,
+  ) {}
+  @Post('/')
+  addProductToBasket(
+    @Body() product: AddItemDto,
+  ): Promise<AddProductToBasketResponse> {
+    return this.basketService.add(product);
+  }
 
-    @Post('/')
-    addProductToBasket(
-        @Body() item: AddProductDto,
-    ): AddProductToBasketResponse {
-        return this.basketService.add(item);
-    }
+  @Delete('/all')
+  clearBasket(): Promise<void> {
+    return this.basketService.clearBasket();
+  }
 
-    @Delete('/:index')
-    removeProductFromBasket(
-        @Param('index') index: string,
-    ): RemoveProductFromBasketResponse {
-        return this.basketService.remove(Number(index));
-    }
-    @Get('/')
-    listProductInBasket(): ListProductInBasketResponse{
-return this.basketService.list();
-    }
-    @Get('/total-price')
-    getTotalPrice(): Promise<GetTotalPriceResponse>{
-        return this.basketService.getTotalPrice();
-    }
+  @Delete('/:id')
+  removeProduct(
+    @Param('id') id: string,
+  ): Promise<RemoveProductFromBasketResponse> {
+    return this.basketService.remove(id);
+  }
+
+  @Get('/')
+  getBasket(): Promise<GetBasketResponse> {
+    return this.basketService.getAll();
+  }
+
+  @Get('/total-price')
+  getTotalBasketPrice(): Promise<GetTotalBasketPriceResponse> {
+    return this.basketService.getTotalPrice();
+  }
 }

@@ -1,19 +1,11 @@
-import {Module} from '@nestjs/common';
-import {AppController} from './app.controller';
-import {AppService} from './app.service';
-import { TypeOrmModule } from '@nestjs/typeorm';
-import {BasketModule} from "./basket/basket.module";
-import {ShopModule} from "./shop/shop.module";
-
+import { Module } from '@nestjs/common';
+import { ShopModule } from './shop/shop.module';
+import { BasketModule } from './basket/basket.module';
+import { DatabaseModule } from './database/database.module';
 
 @Module({
-    imports: [
-        TypeOrmModule.forRoot(),
-        BasketModule,
-        ShopModule,
-        ],
-    controllers: [AppController],
-    providers: [AppService],
+  imports: [ShopModule, BasketModule, DatabaseModule],
+  controllers: [],
+  providers: [],
 })
-export class AppModule {
-}
+export class AppModule {}
